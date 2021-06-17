@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Octauthent Demo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://octauthent.com/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://octauthent.com/img/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://octauthent.com/img/favicon/favicon.ico"
+    />
+    <style>
+      .container {
+        max-width: 960px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <div class="content">
+          <div class="columns">
+            <div class="column">
+              <div class="block">
+                <h1 class="title">Octauthent Demo</h1>
+              </div>
+              <div class="block">
+                <p>Hi there 👋</p>
+                <p>This demo is composed of 2 pages:</p>
+                <ul>
+                  <li>
+                    The page you're currently reading, accessible to everyone
+                  </li>
+                  <li>
+                    A <a href="/private">private page</a>, protected by
+                    Octauthent
+                  </li>
+                </ul>
+              </div>
+              <h2 class="title is-size-4">Credentials</h2>
+
+              <div class="block">
+                If you want to access the <a href="/private">private page</a>,
+                you'll need the following credentials:
+              </div>
+              <div class="block">
+                <div><b>username</b>: <code>demo</code></div>
+                <div><b>password</b>: <code>octauthent</code></div>
+              </div>
+
+              <div class="block">
+                <h2 class="title is-size-4">How it works</h2>
+                <p>
+                  This website is <b>nothing more than 2 HTML files</b> hosted
+                  on GitHub Pages!
+                  <br />
+                  <span class="is-size-7"
+                    >You can read the source code
+                    <a
+                      href="https://github.com/octauthent/octauthent-demo"
+                      target="_blank"
+                      >on GitHub</a
+                    >
+                    if you want!</span
+                  >
+                </p>
+                <p>
+                  There is absolutely no code related to authentication, so
+                  everybody could (normally) access the private page
+                </p>
+                <p>
+                  However, thanks to
+                  <a href="https://octauthent.com" target="_blank">Octauthent</a
+                  >, here is what happens when you access
+                  <code>demo.octauthent.com/private</code> from your browser:
+                </p>
+                <ol>
+                  <li>
+                    A DNS server recognizes the address and responds with
+                    <b>a Cloudflare IP</b>
+                  </li>
+                  <li>
+                    Your browser <b>asks for the page</b> to the Cloudflare IP
+                    it received
+                  </li>
+                  <li>
+                    Cloudflare <b>runs the Octauthent code</b> to know what to
+                    do
+                  </li>
+                  <li>
+                    If Octauthent decides that
+                    <b class="has-text-danger">you are not allowed</b>,
+                    Cloudflare <b>responds with a customized login form</b>
+                  </li>
+                  <li>
+                    If Octauthent decides that
+                    <b class="has-text-success">the page can be seen</b>:
+                    <ol>
+                      <li>
+                        Cloudflare calls <b>asks to Github Pages</b> the content
+                        of <code>demo.octauthent.com/private</code>
+                      </li>
+                      <li>
+                        Github recognizes the address and<b>
+                          responds with the page content</b
+                        >
+                      </li>
+                      <li>
+                        Cloudflare <b>sends the response</b> back to your
+                        browser
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
