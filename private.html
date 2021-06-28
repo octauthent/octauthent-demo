@@ -30,50 +30,69 @@
       href="https://octauthent.com/img/favicon/favicon.ico"
     />
     <style>
+      html {
+        background: #424242;
+      }
+      .box {
+        background: #363636;
+      }
       .container {
         max-width: 960px !important;
+      }
+      a {
+        color: #a7c9ff;
+      }
+      a:hover {
+        color: #fff;
       }
     </style>
   </head>
   <body>
-    <section class="section">
+    <section class="section has-text-white">
       <div class="container">
         <div class="content">
-          <div class="columns">
-            <div class="column">
-              <div class="block">
-                <h1 class="title">You made it! 🎉</h1>
-              </div>
-              <div class="block">
-                <p>You can access this page for exactly 1 minute</p>
-                <p>
-                  If you refresh the page past this delay, you'll be shown the
-                  login form again.
-                </p>
-              </div>
-              <div class="block">
-                <h2 class="title is-size-4">Want the same on your site?</h2>
-                <p>
-                  Create an account on
-                  <a href="https://octauthent.com" target="_blank"
-                    >Octauthent</a
-                  >
-                  and integrate your login form in less than a minute!
-                </p>
-              </div>
-              <div class="block mt-6">
-                <p class="">
-                  <a
-                    href="https://app.octauthent.com/login"
-                    target="_blank"
-                    class="button is-dark mx-3"
-                    >Sign up</a
-                  >
-                  <a href="/" class="button is-outlined is-dark mx-3"
-                    >Back to homepage</a
-                  >
-                </p>
-              </div>
+          <div class="box has-text-white">
+            <div class="block">
+              <h1 class="title has-text-white">You made it! 🎉</h1>
+            </div>
+            <div class="block">
+              <p>
+                You can access this <b>very private</b> page for exactly 1
+                minute!
+              </p>
+              <p>
+                If you refresh the page past this delay, you'll be shown the
+                login form again.
+              </p>
+            </div>
+            <div class="block">
+              <h2 class="title is-size-4 has-text-white">
+                Want the same on your site?
+              </h2>
+              <p>
+                Create an account on
+                <a href="https://octauthent.com" target="_blank">Octauthent</a>
+                and integrate your login form in less than a minute!
+              </p>
+            </div>
+            <div class="block mt-6">
+              <p class="">
+                <a
+                  href="https://app.octauthent.com/login"
+                  target="_blank"
+                  class="button is-white mx-3"
+                  >Sign up</a
+                >
+                <a href="/" class="button is-outlined is-white mx-3"
+                  >Back to homepage</a
+                >
+                <button
+                  class="button is-white is-outlined mx-3"
+                  onclick="document.cookie ='octauthent_token= ; expires = Thu, 01 Jan 1970 00:00:00 GMT'; location.reload()"
+                >
+                  Logout
+                </button>
+              </p>
             </div>
           </div>
         </div>
