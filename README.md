@@ -29,7 +29,7 @@ However, thanks to [Octauthent](https://octauthent.com), here is what happens wh
 2.  Your browser **asks for the page** to the Cloudflare IP it received
 3.  Cloudflare **runs the Octauthent code** to know what to do
 4.  If Octauthent decides that **you are not allowed**, Cloudflare **responds with a customized login form**
-5.  If Octauthent decides that **the page can be seen**:
-    1.  Cloudflare **asks to Github Pages** the content of `demo.octauthent.com/private`
+5.  If Octauthent decides that **the page can be accessed**:
+    1.  Cloudflare **asks Github Pages** for the content of `demo.octauthent.com/private`
     2.  Github recognizes the address and **responds with the page content**
     3.  Cloudflare **sends the response** back to your browser
